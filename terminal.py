@@ -19,11 +19,12 @@ while True:
     if retorno == 1: 
         velocidade_carro = Acelera(velocidade_carro, carro_esta_ligado)
     if retorno == 2: 
-        Freia()
+        velocidade_carro = Freia(carro_esta_ligado, velocidade_carro)
     if retorno == 3: 
-        VireDireita()
+        velocidade_carro = Vire('direita', velocidade_carro, carro_esta_ligado)
     if retorno == 4: 
-        VireEsquerda()
+        velocidade_carro = Vire('esquerda', velocidade_carro, carro_esta_ligado)
     if retorno == 5:
-        DesligaCarro(carro_esta_ligado)
+        DesligaCarro(carro_esta_ligado, velocidade_carro)
     print(f'O carro está a: {velocidade_carro} Km/h')
+    TomeiMulta(velocidade_carro)
